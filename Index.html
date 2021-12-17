@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture CSS Animation</title>
+    <style>
+        .content{
+            border-style:solid;
+            width:500px;
+            height:500px;
+            background:linear-gradient(#F6C8FF, #D2B0FF, #BAA5FF, #99AAFF, #AAE7F0);
+        }
+
+        .box1{
+            background: url(widepeepo.png);
+            background-size:500px 500px;
+            width:500px;
+            height:500px;
+            transition: 0.5s ease-in-out;
+            background-repeat: no-repeat;
+        }
+
+        .text{
+            opacity:0;
+            transition: all 0.8s ease-in-out;   
+            text-align:left;
+            font-size:30px;
+            margin-top:-600px;
+            z-index:1;
+        }
+
+        .content:hover > .box1{
+            background-size: 150px 150px;
+            width:150px;
+            height:150px;
+            border-radius:50%;
+            border: 5px solid #99AAFF;
+            transform:translate(460px, 170px);
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        }
+
+        .content:hover .text{
+            opacity:1;
+            margin-top:50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="box1">
+        </div>
+        <p class="text">
+            Lorem Ipsum is simply dummy text.
+        </p>
+    </div>
+</body>
+</html>
